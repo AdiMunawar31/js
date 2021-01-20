@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--  font awesome icons  -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- Bootstrap CSS -->
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>D2Ycoding</title>
+    <style>
+        .jumbotron {
+            background-image: url('img/2.jpg');
+            height: 650px;
+            background-size: cover;
+        }
+
+        .icon {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #darkmode {
+            background-color: #080808;
+            color: #e0dcdc;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="pb-2" src="img/z.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="market.html">Market</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                    <button class="btn btn-outline-light text-dark my-2 mr-3 my-sm-0" id="login"
+                        type="submit">Login</button>
+                    <button class="btn btn-outline-secondary my-2 mr-3 my-sm-0" id="regis"
+                        type="submit">Register</button>
+
+                    <div class="custom-control custom-switch ml-3">
+                        <span class="icon" onclick="setDarkmode(false)">👓</span>
+                        <span class="icon" onclick="setDarkmode(true)">🕶</span>
+                    </div>
+                    <h5 class="mt-2 ml-1" id="txt"> | LIGHTMODE</h5>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="">
+        <div class="jumbotron">
+            <div class="container pt-5 text-white">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 font-weight-bold">D2Y CODING</h1>
+                        <p class="lead">“A satisfied customer is the best business strategy of all.”</p>
+                        <hr class="">
+                        <p>“In the modern world of business, it is useless to be a creative, original thinker unless you
+                            can also sell what you create.”
+                        </p>
+                        <div class="input-group mt-5 pr-lg-5">
+                            <input style="border: 1px solid #ffee00;" type="text" class="form-control mr-2"
+                                placeholder="Email Address / Phone Number" aria-label="Email Address / Phone Number"
+                                aria-describedby="button-addon2">
+                            <div class="input-group-append pr-lg-5">
+                                <button class="btn btn-warning mr-lg-5" type="button" id="button-addon2">Register
+                                    Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+                <div class="card" id="card1">
+                    <img src="img/1.jpg" class="card-img-top" height="200" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">WEB</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-warning btn-block btn-md">VISIT US</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+                <div class="card" id="card2">
+                    <img src="img/b.jpg" class="card-img-top" height="200" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">DESKTOP</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-warning btn-block btn-md">VISIT US</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+                <div class="card" id="card3">
+                    <img src="img/a.jpg" class="card-img-top" height="200" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MOBILE</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-warning btn-block btn-md">VISIT US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  ======================== Brand Area ==============================  -->
+
+    <main class=" site-main">
+        <!--  ====================== Start Services Area =============================  -->
+
+        <section class="services-area bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center services-title">
+                        <h1 class="text-uppercase title-text">Services Offers</h1>
+                        <p class="para">
+                            There are many variations of passages of Lorem Ipsum available, but the
+                            majority have
+                            suffered alteration in some form, by injected humour
+                        </p>
+                    </div>
+                </div>
+                <div class="container services-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services" id="s1">
+                                <div class="sevices-img text-center py-1">
+                                    <img src="./img/services/s1.svg" height="180" width="180" alt="Services-1">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
+                                    <p class="card-text text-secondary">
+                                        Some quick example text to build on the card
+                                        title and make up
+                                        the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services" id="s2">
+                                <div class="sevices-img text-center py-1">
+                                    <img src="./img/services/s2.svg" height="180" width="180" alt="Services-2">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">ux/ui desing</h5>
+                                    <p class="card-text text-secondary">
+                                        Some quick example text to build on the card
+                                        title and make up
+                                        the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services" id="s3">
+                                <div class="sevices-img text-center py-1">
+                                    <img src="./img/services/s3.svg" height="180" width="180" alt="Services-3">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">web design</h5>
+                                    <p class="card-text text-secondary">
+                                        Some quick example text to build on the card
+                                        title and make up
+                                        the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="services" id="s4">
+                                <div class="sevices-img text-center py-1">
+                                    <img src="./img/services/s4.svg" height="180" width="180" alt="Services-4">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-uppercase font-roboto">seo optimize</h5>
+                                    <p class="card-text text-secondary">
+                                        Some quick example text to build on the card
+                                        title and make up
+                                        the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  ====================== End Services Area =============================  -->
+
+
+        <section class="brand-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="first-row row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo1.png" alt="Brand-1 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo2.png" alt="Brand-2 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo3.png" alt="Brand-3 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo4.png" alt="Brand-4">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo5.png" alt="Brand-5 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo6.png" alt="Brand-6">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo7.png" alt="Brand-7 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo8.png" alt="Brand-8 ">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-brand">
+                                    <img src="./img/brands/logo9.png" alt="Brand-9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="experience-area">
+                            <div class="d-flex flex-row years-area">
+                                <h2 class="p-3 years">2</h2>
+                                <h2>
+                                    <span>Years</span>
+                                    <span>Experience</span>
+                                    <span>Working</span>
+                                </h2>
+                            </div>
+                            <div class="d-flex flex-row flex-wrap call-area">
+                                <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
+                                <div class="call-now">
+                                    <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
+                                    <span class="font-roboto py-2">(+62)-815-6375-4507</span>
+                                </div>
+                            </div>
+                            <div class="bg-panel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--  ======================== End Brand Area ==============================  -->
+
+
+    <script>
+        // DARKMODE
+        function setDarkmode(isDark) {
+            if (isDark) {
+                document.body.setAttribute('id', 'darkmode');
+                $('#login').attr('class', 'btn btn-md btn-outline-dark text-light my-2 mr-3 my-sm-0');
+                $('#regis').attr('class', 'btn btn-md btn-warning text-dark my-2 mr-3 my-sm-0');
+                $('#select').attr('class', 'custom-select bg-dark mb-4')
+                $('nav').attr('class', 'navbar fixed-top navbar-expand-lg navbar-dark bg-dark');
+                $('section').attr('class', 'services-area bg-dark');
+                $('#card1').attr('class', 'card bg-dark');
+                $('#card2').attr('class', 'card bg-dark');
+                $('#card3').attr('class', 'card bg-dark');
+                $('#s1').attr('class', 'services bg-dark');
+                $('#s2').attr('class', 'services bg-dark');
+                $('#s3').attr('class', 'services bg-dark');
+                $('#s4').attr('class', 'services bg-dark');
+                $('#txt').html(' | DARKMODE');
+            } else {
+                document.body.setAttribute('id', '');
+                $('th, td').attr('class', 'text-dark');
+                $('#login').attr('class', 'btn btn-outline-light text-dark my-2 mr-3 my-sm-0');
+                $('#regis').attr('class', 'btn btn-outline-secondary text-dark my-2 mr-3 my-sm-0');
+                $('#select').attr('class', 'custom-select mb-4')
+                $('nav').attr('class', 'navbar navbar-expand-lg navbar-light bg-light');
+                $('section').attr('class', 'services-area bg-light');
+                $('#card1').attr('class', 'card bg-light');
+                $('#card2').attr('class', 'card bg-light');
+                $('#card3').attr('class', 'card bg-light');
+                $('#s1').attr('class', 'services bg-light');
+                $('#s2').attr('class', 'services bg-light');
+                $('#s3').attr('class', 'services bg-light');
+                $('#s4').attr('class', 'services bg-light');
+                $('#txt').html(' | LIGHTMODE');
+            }
+        }
+    </script>
+
+    <script src="./js/Jquery3.4.1.min.js"></script>
+    <script src="./js/script.js"></script>
+
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

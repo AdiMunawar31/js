@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>D2Ycoding</title>
+    <style>
+        .icon {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #darkmode {
+            background-color: #040404;
+            color: #e0dcdc;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="pb-2" src="img/z.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="market.html">Market</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                    <button class="btn btn-outline-light text-dark my-2 mr-3 my-sm-0" id="login"
+                        type="submit">Login</button>
+                    <button class="btn btn-outline-secondary my-2 mr-3 my-sm-0" id="regis"
+                        type="submit">Register</button>
+                    <div class="custom-control custom-switch ml-3">
+                        <span class="icon" onclick="setDarkmode(false)">
+                            👓
+                        </span>
+                        <span class="icon" onclick="setDarkmode(true)">🕶</span>
+
+                    </div>
+                    <h5 class="mt-2 ml-1" id="txt"> | LIGHTMODE</h5>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="btn-group mt-5">
+            <span>
+                <h1 id="logo" class="mt-5 mr-3">BINANCE</h1>
+            </span>
+            <div class="input-group mt-5">
+                <select class="custom-select mb-4 mt-2" id="select">
+                    <option selected value="">Choose...</option>
+                    <option value="BTCUSDT">BTC / USDT</option>
+                    <option value="ETHUSDT">ETH / USDT</option>
+                    <option value="XRPUSDT">XRP / USDT</option>
+                    <option value="LTCUSDT">LTC / USDT</option>
+                    <option value="LINKUSDT">LINK / USDT</option>
+                    <option value="BCHUSDT">BCH / USDT</option>
+                    <option value="BNBUSDT">BNB / USDT</option>
+                </select>
+            </div>
+        </div>
+
+        <table class="table mt-3">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="row">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">lastPrice</th>
+                    <th scope="col">priceChangePercent</th>
+                    <th scope="col">High</th>
+                    <th scope="col">Low</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col">Quote Volume</th>
+                </tr>
+            </thead>
+            <div>
+                <tbody id="bnb">
+                    <tr>
+                        <td colspan="8">
+                            <div class="d-block text-center py-1">
+                                <h5 class="my-3 ml-3">PLEASE.. SELECT YOUR PAIR!</h5>
+                                <div class="spinner-grow text-warning mb-2" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-warning mb-2" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+
+        <h1 class="mt-5">CoinGecko</h1>
+
+        <table class="table table-striped " id="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="row">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Percentage</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">High</th>
+                    <th scope="col">Low</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <td colspan="8">
+                        <div class="d-block text-center py-5">
+                            <div class="spinner-grow text-warning mb-2" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-warning mb-2" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+    </div>
+    </div>
+
+    <script>
+        // DARKMODE
+        function setDarkmode(isDark) {
+            if (isDark) {
+                document.body.setAttribute('id', 'darkmode');
+                $('th').attr('class', 'text-light');
+                $('td').attr('class', 'text-light');
+                $('tbody').attr('class', 'text-light');
+                $('table').attr('class', 'table table-striped bg-dark');
+                $('thead').attr('class', 'thead-dark');
+                $('#select').attr('class', 'custom-select bg-dark mb-4')
+                $('nav').attr('class', 'navbar fixed-top navbar-expand-lg navbar-dark bg-dark')
+                $('#login').attr('class', 'btn btn-md btn-outline-dark text-light my-2 mr-3 my-sm-0');
+                $('#regis').attr('class', 'btn btn-md btn-warning text-dark my-2 mr-3 my-sm-0');
+                $('#txt').html(' | DARKMODE');
+
+            } else {
+                document.body.setAttribute('id', '');
+                $('th, td').attr('class', 'text-dark');
+                $('table').attr('class', 'table table-striped');
+                $('#login').attr('class', 'btn btn-outline-light text-dark my-2 mr-3 my-sm-0');
+                $('#regis').attr('class', 'btn btn-outline-secondary text-dark my-2 mr-3 my-sm-0');
+                $('tbody').attr('class', 'text-dark');
+                $('thead').attr('class', 'thead-light');
+                $('#select').attr('class', 'custom-select mb-4')
+                $('#txt').html(' | LIGHTMODE');
+                $('nav').attr('class', 'navbar fixed-top navbar-expand-lg navbar-light bg-light')
+            }
+        }
+    </script>
+    <script src="./js/Jquery3.4.1.min.js"></script>
+    <script src="./js/script.js"></script>
+
+
+    <!--  Bootstrap js file  -->
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
